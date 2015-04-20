@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title> Self-organizing map approach to the Travelling salesman problem </title>
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body onload="init()">
+    <canvas id="tspCanvas" width="500px" height="500px">Canvas not supported.</canvas>
+    Cities
+    <input type="text" value="10" id="numCitiesInput" class="parameter">
+    Epochs
+    <input type="text" value="1000" id="numEpochsInput">
+    Learning rate
+    <input type="text" value="0.2" id="learningRateInput">
+    <div id="runTspButton" onclick="runTsp()">
+        Run
+    </div>
+    <script type="application/javascript" src="https://code.createjs.com/createjs-2014.12.12.min.js"></script>
+    <script type="application/javascript" src="js/tsp.js"></script>
+  </body>
+</html>
