@@ -1,24 +1,45 @@
 <!DOCTYPE html>
-  <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title> Self-organizing map approach to the Travelling salesman problem </title>
+<head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Hiroyuki Vincent Yamazaki</title>
       <meta name="description" content="">
-      <meta name="keywords" content="">
-      <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body onload="init()">
-    <canvas id="tspCanvas" width="500px" height="500px">Canvas not supported.</canvas>
-    Cities
-    <input type="text" value="10" id="numCitiesInput" class="parameter">
-    Epochs
-    <input type="text" value="1000" id="numEpochsInput">
-    Learning rate
-    <input type="text" value="0.2" id="learningRateInput">
-    <div id="runTspButton" onclick="runTsp()">
-        Run
+        <meta name="keywords" content="">
+          <link rel="stylesheet" href="style.css">
+            <link rel="stylesheet" href="button.css">
+              <link rel="stylesheet" href="slider.css">
+                <link href="http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css"/>
+                <link href="http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700" rel="stylesheet" type="text/css"/>
+                <link href="http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700italic,700&subset=latin,latin-ext" rel="stylesheet" type="text/css"/>
+                <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,latin-ext" rel="stylesheet" type="text/css"/>
+                </head>
+<body onload="init()">
+  <canvas id="som-canvas">Canvas not supported.</canvas>
+  <div id="content">
+    <div class="tsp-container">
+      <label>Cities</label><span id="cities">10</span><input id="numCitiesInput" type="range" min="2" max="200" value="10" step="1" oninput="showValue('cities', this.value)"/>
+      <label>Epochs</label><span id="epochs">1000</span>
+      <input id="numEpochsInput" type="range" min="1" max="10000" value="1000" step="1" oninput="showValue('epochs', this.value)"/>
+      <label>Learning rate</label><span id="learningRate">0.1</span><input id="learningRateInput" type="range" min="0.0" max="2.0" value="0.1" step="0.01" oninput="showValue('learningRate', this.value)"/>
+      
+      <script type="text/javascript">
+        function showValue(id, newValue)
+        {
+          document.getElementById(id).innerHTML=newValue;
+        }
+      </script>
+      
     </div>
+    
+    <!-- <div class="button roll" id="runTspButton" onclick="runTsp()"> -->
+    <div id="run-button" class="button roll" onclick="clickedSomButton()">
+      <div><img src="run_white.png"/></div>
+      <div><img src="run_black.png"/></div>
+    </div>
+    
     <script type="application/javascript" src="https://code.createjs.com/createjs-2014.12.12.min.js"></script>
-    <script type="application/javascript" src="js/tsp.js"></script>
-  </body>
+    <script type="application/javascript" src="main.js"></script>
+    <script type="application/javascript" src="som.js"></script>
+  </div>
+</body>
 </html>

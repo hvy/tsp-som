@@ -1,0 +1,96 @@
+.button {
+  margin-right: 10px;
+  margin-top: 50px;
+  border: 0;
+  font-size: 12px;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-user-select: none;
+  cursor: default;
+  display: inline-block;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.roll {
+  perspective: 500px;
+  -webkit-perspective: 500px;
+  -moz-perspective: 500px;
+}
+
+.roll div {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 30px;
+  border: 1px solid #000000;
+  pointer-events: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.roll div:nth-child(1) {
+  color: #000000;
+  background-color: #000000;
+  
+  transform: rotateX(90deg);
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  
+  transform-origin: 50% 50% -15px;
+  -webkit-transform-origin: 50% 50% -15px;
+  -moz-transform-origin: 50% 50% -15px;
+}
+
+.roll div:nth-child(2) {
+  color: #000000;
+  background-color: #ffffff;
+  
+  transform: rotateX(0deg);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  
+  transform-origin: 50% 50% -15px;
+  -webkit-transform-origin: 50% 50% -15px;
+  -moz-transform-origin: 50% 50% -15px;
+}
+
+.roll:hover div:nth-child(1) {
+  color: #FFFFFF;
+  transition: all 0.2s ease;
+  
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  
+  transform: rotateX(0deg);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+}
+
+.roll:hover div:nth-child(2) {
+  background-color: #000000;
+  
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  
+  transform: rotateX(-90deg);
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+}
