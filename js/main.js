@@ -54,8 +54,8 @@ function updateButton() {
  * Change the button state to ready-to-run.
  */
 function showRunButtons() {
-    somRunButtonElem.children[0].children[0].src = "run_white.png";
-    somRunButtonElem.children[1].children[0].src = "run_black.png";
+    somRunButtonElem.children[0].children[0].src = "assets/run_white.png";
+    somRunButtonElem.children[1].children[0].src = "assets/run_black.png";
     buttonShowsRun = true;
 }
 
@@ -63,7 +63,7 @@ function showRunButtons() {
  * Change the button state to stop.
  */
 function showStopButtons() {
-    somRunButtonElem.children[0].children[0].src = "stop_white.png";
-    somRunButtonElem.children[1].children[0].src = "stop_black.png";
+    somRunButtonElem.children[0].children[0].src = "assets/stop_white.png";
+    somRunButtonElem.children[1].children[0].src = "assets/stop_black.png";
     buttonShowsRun = false;
 }
