@@ -23,7 +23,7 @@ var color = {
     BLUE : "#0000FF",
     WHITE : "#FFFFFF",
     BLACK : "#424242",
-GRAY: "#6B6B6B"
+    GRAY: "#6B6B6B"
 };
 
 /**
